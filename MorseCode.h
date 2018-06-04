@@ -36,7 +36,8 @@ class Morsecode{
     
     public:
         Morsecode(String morse_string);
-        unsigned int return_binary_letter();
+        unsigned char binary_letter();
+        
 
     private:
         //The character translated from morse code
@@ -47,6 +48,8 @@ class Morsecode{
         char translate_into_char(String morse_code_string);
         //Morse Character array for quicker searches
         String morse_char_array[26] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
+        char alphabet_array[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v'
+        ,'w','x','y','z'};
         
 };
 
