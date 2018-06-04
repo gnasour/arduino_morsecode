@@ -4,8 +4,8 @@
 
 
 Morsecode::Morsecode(String morse_string){
-    letter = translate_into_char(morse_string);
-    binary_letter();
+    letter = (int)translate_into_char(morse_string);
+    
 }
 
 char Morsecode::translate_into_char(String morse_code_string){
@@ -16,6 +16,14 @@ char Morsecode::translate_into_char(String morse_code_string){
     }
 }
 
-unsigned char Morsecode::binary_letter(){
-    for(int increment = 0)
+String Morsecode::binary_letter(){
+    for(int increment = 0; increment < 8; increment++){
+        if((letter & 1) == 1){
+            binary_string += "1";
+        }else{
+            binary_string += "0";
+        }
+        letter >>= 1;
+    }
+    return binary_string;
 }

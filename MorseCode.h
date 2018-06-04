@@ -36,18 +36,21 @@ class Morsecode{
     
     public:
         Morsecode(String morse_string);
-        unsigned char binary_letter();
+        String binary_letter();
         
 
     private:
         //The character translated from morse code
-        char letter;
+        int letter;
+        //Binary string representation of the ASCII decimal value of the character
+        String binary_string;
         //The binary representation of the character
         unsigned int binary_representation;
         //Method to translate morse string into a character
         char translate_into_char(String morse_code_string);
         //Morse Character array for quicker searches
         String morse_char_array[26] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
+        //Alphabet character array for quick lookup to find the character that matched the morse string
         char alphabet_array[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v'
         ,'w','x','y','z'};
         
