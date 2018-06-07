@@ -25,5 +25,13 @@ String Morsecode::binary_letter(){
         }
         letter >>= 1;
     }
+    binary_string = reverse_binary_string(binary_string);
     return binary_string;
+}
+
+String Morsecode::reverse_binary_string(String morse_code_string){
+    for(int increment = 0; increment < 8; increment++){
+        reversed_binary_string += morse_code_string[7-increment]; 
+    }
+    return reversed_binary_string;
 }

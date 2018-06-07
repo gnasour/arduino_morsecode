@@ -44,10 +44,14 @@ class Morsecode{
         int letter;
         //Binary string representation of the ASCII decimal value of the character
         String binary_string;
+        //Reversed binary string
+        String reversed_binary_string;
         //The binary representation of the character
         unsigned int binary_representation;
         //Method to translate morse string into a character
         char translate_into_char(String morse_code_string);
+        //Method to reverse the binary string to Big Endian
+        String reverse_binary_string(String morse_code_string);
         //Morse Character array for quicker searches
         String morse_char_array[26] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
         //Alphabet character array for quick lookup to find the character that matched the morse string
